@@ -21,17 +21,24 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
     var isFrom = true
     @IBOutlet weak var toText: UITextField!
     @IBOutlet weak var fromText: UITextField!
+    @IBOutlet weak var fromImage: UIImageView!
     
     @IBOutlet weak var amtText: UITextField!
     
+    @IBOutlet weak var defaultText: UITextField!
+    @IBOutlet weak var toImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
     @IBAction func converCurrency(_ sender: Any) {
         
         if(amtText.text == ""){
+            
+            let alert = UIAlertController(title: "Empty Field", message: "Please Enter Amount", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
             return
         }
         if(fromText.text == "INR") {
-            
+          //  fromImage.image = #imageLiteral(resourceName: "india")
             usd = 0.014
             cad = 0.019
             inr = 1
@@ -40,12 +47,13 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
             var val = ""
             if(toText.text == "INR"){
                 
+                 //     toImage.image = #imageLiteral(resourceName: "india")
                 val = amtText.text!
                 
                 self.resultLabel.text = String(val)
             }
             if(toText.text == "CAD"){
-                
+                     // toImage.image = #imageLiteral(resourceName: "canada")
                 //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 //?? "0.0") * cad
@@ -54,7 +62,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 self.resultLabel.text =  String(format:"%.2f", result)
             }
             if(toText.text == "EURO"){
-                
+             //   toImage.image = #imageLiteral(resourceName: "euro")
                 //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 //?? "0.0") * cad
@@ -63,7 +71,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "USD"){
-                
+                //      toImage.image = #imageLiteral(resourceName: "euro")
                 //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 //?? "0.0") * cad
@@ -75,6 +83,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
         
         
         if(fromText.text == "CAD"){
+               //   fromImage.image = #imageLiteral(resourceName: "canada")
             var val = ""
             usd = 0.76
             cad = 1.0
@@ -82,7 +91,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
             euro = 0.68
             var result = 0.0
             if(toText.text == "INR"){
-                
+                 //     toImage.image = #imageLiteral(resourceName: "india")
                 
                 val = amtText.text!
                 
@@ -90,8 +99,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "CAD"){
-                
-                
+               //       toImage.image = #imageLiteral(resourceName: "canada")
                 
                 val = amtText.text!
                 
@@ -99,7 +107,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 
             }
             if(toText.text == "EURO"){
-                
+                    //  toImage.image = #imageLiteral(resourceName: "euro")
                 //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 
@@ -107,7 +115,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "USD"){
-                
+                  //    toImage.image = #imageLiteral(resourceName: "us")
                 //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 
@@ -117,6 +125,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
         }
         
         if(fromText.text == "USD"){
+                 // fromImage.image = #imageLiteral(resourceName: "us")
                            var val = ""
                            usd = 1.0
                            cad = 1.32
@@ -125,7 +134,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                               var result = 0.0
                            
             if(toText.text == "INR"){
-                               
+                        //             toImage.image = #imageLiteral(resourceName: "india")
                                val = amtText.text!
                                //?? "0.0") * cad
                                
@@ -134,7 +143,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "CAD"){
-                               
+                         //            toImage.image = #imageLiteral(resourceName: "canada")
                                val = amtText.text!
                                //?? "0.0") * cad
                                
@@ -143,7 +152,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "EURO"){
-                               
+                               //      toImage.image = #imageLiteral(resourceName: "euro")
                                //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                                val = amtText.text!
                                //?? "0.0") * cad
@@ -154,7 +163,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                            }
                            if(toText.text == "USD"){
                                
-                               
+                                //     toImage.image = #imageLiteral(resourceName: "us")
                                val = amtText.text!
                                
                                self.resultLabel.text = String(val)
@@ -163,6 +172,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                    }
         
         if(fromText.text == "EURO"){
+                //  fromImage.image = #imageLiteral(resourceName: "euro")
                            var val = ""
                            usd = 1.11
                            cad = 1.46
@@ -170,7 +180,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                            euro = 1.0
                             var result = 0.0
                            if(toText.text == "INR"){
-                               
+                         //            toImage.image = #imageLiteral(resourceName: "india")
                                val = amtText.text!
                                //?? "0.0") * cad
                                
@@ -179,7 +189,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "CAD"){
-                               
+                            //         toImage.image = #imageLiteral(resourceName: "canada")
                                val = amtText.text!
                                //?? "0.0") * cad
                                
@@ -188,13 +198,13 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "EURO"){
-                               
+                             //        toImage.image = #imageLiteral(resourceName: "euro")
                                val = amtText.text!
                                
                                self.resultLabel.text = String(val)
                            }
                            if(toText.text == "USD"){
-                               
+                           //          toImage.image = #imageLiteral(resourceName: "us")
                                //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                                val = amtText.text!
                                //?? "0.0") * cad
@@ -220,9 +230,16 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
         print("\(item.text)")
         if(isFrom){
             fromText.text = item.text
+              fromImage.image = item.img
+            
         }else{
+            
+            
+            toImage.image = item.img
             toText.text = item.text
         }
+        
+        setDfaultValue()
         navigationController?.popViewController(animated:true)
     }
     
@@ -287,6 +304,109 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
         print("Will Appered")
     }
     
-    
+    func setDfaultValue(){
+        if(fromText.text == "INR") {
+             //  fromImage.image = #imageLiteral(resourceName: "india")
+               usd = 0.014
+               cad = 0.019
+               inr = 1
+               euro = 0.013
+               
+               if(toText.text == "INR"){
+                   defaultText.text = String(inr)
+                  
+               }
+               if(toText.text == "CAD"){
+                       defaultText.text = String(cad)
+              
+               }
+               if(toText.text == "EURO"){
+                       defaultText.text = String(euro)
+             
+               }
+               if(toText.text == "USD"){
+                       defaultText.text = String(usd)
+               
+               }
+           }
+        
+        
+        if(fromText.text == "CAD"){
+           
+             usd = 0.76
+             cad = 1.0
+             inr = 54.0
+             euro = 0.68
+            
+            if(toText.text == "INR"){
+                              defaultText.text = String(inr)
+                             
+                          }
+                          if(toText.text == "CAD"){
+                                  defaultText.text = String(cad)
+                         
+                          }
+                          if(toText.text == "EURO"){
+                                  defaultText.text = String(euro)
+                        
+                          }
+                          if(toText.text == "USD"){
+                                  defaultText.text = String(usd)
+                          
+                          }
+         }
+         
+        if(fromText.text == "USD"){
+                             
+                                  usd = 1.0
+                                  cad = 1.32
+                                  inr = 71.06
+                                  euro = 0.90
+                                  
+              if(toText.text == "INR"){
+                                          defaultText.text = String(inr)
+                                         
+                                      }
+                                      if(toText.text == "CAD"){
+                                              defaultText.text = String(cad)
+                                     
+                                      }
+                                      if(toText.text == "EURO"){
+                                              defaultText.text = String(euro)
+                                    
+                                      }
+                                      if(toText.text == "USD"){
+                                              defaultText.text = String(usd)
+                                      
+                                      }
+                          }
+        
+        if(fromText.text == "EURO"){
+           
+                           usd = 1.11
+                           cad = 1.46
+                           inr = 79.11
+                           euro = 1.0
+                    if(toText.text == "INR"){
+                                            defaultText.text = String(inr)
+                                           
+                                        }
+                                        if(toText.text == "CAD"){
+                                                defaultText.text = String(cad)
+                                       
+                                        }
+                                        if(toText.text == "EURO"){
+                                                defaultText.text = String(euro)
+                                      
+                                        }
+                                        if(toText.text == "USD"){
+                                                defaultText.text = String(usd)
+                                        
+                                        }
+                           
+                           
+                       }
+           
+    }
 }
 

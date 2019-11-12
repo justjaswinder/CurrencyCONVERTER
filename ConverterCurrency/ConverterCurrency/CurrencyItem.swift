@@ -7,9 +7,10 @@
 //
 
 import Foundation
-
+import UIKit
 class CurrencyItem {
         
     var text = ""
+    var img = UIImage()
     
 }
