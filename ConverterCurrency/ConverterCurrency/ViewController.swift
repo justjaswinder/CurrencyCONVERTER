@@ -10,7 +10,9 @@ import UIKit
 
 
 
-class ViewController: UIViewController,CurrencyItemControllerDelegate{
+class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultChangeControllerDelegate{
+   
+    
     func addItemViewControllerDidCancel(_ controller: CurrencyListTableViewController) {
         navigationController?.popViewController(animated:true)
     }
@@ -49,8 +51,9 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 
                  //     toImage.image = #imageLiteral(resourceName: "india")
                 val = amtText.text!
-                
-                self.resultLabel.text = String(val)
+                var result = 0.0
+                result = Double(val)! * Double(defaultText.text!)!
+                self.resultLabel.text = String(result)
             }
             if(toText.text == "CAD"){
                      // toImage.image = #imageLiteral(resourceName: "canada")
@@ -58,7 +61,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 val = amtText.text!
                 //?? "0.0") * cad
                 var result = 0.0
-                result = Double(val)! * Double(cad)
+                result = Double(val)! * Double(defaultText.text!)!//Double(cad)
                 self.resultLabel.text =  String(format:"%.2f", result)
             }
             if(toText.text == "EURO"){
@@ -67,7 +70,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 val = amtText.text!
                 //?? "0.0") * cad
                 var result = 0.0
-                result = Double(val)! * Double(euro)
+                result = Double(val)! * Double(defaultText.text!)!// Double(euro)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "USD"){
@@ -76,7 +79,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 val = amtText.text!
                 //?? "0.0") * cad
                 var result = 0.0
-                result = Double(val)! * Double(usd)
+                result = Double(val)! * Double(defaultText.text!)!// Double(usd)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
         }
@@ -95,15 +98,16 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 
                 val = amtText.text!
                 
-                result = Double(val)! * Double(inr)
+                result = Double(val)! * Double(defaultText.text!)!//Double(inr)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "CAD"){
                //       toImage.image = #imageLiteral(resourceName: "canada")
                 
                 val = amtText.text!
-                
-                self.resultLabel.text = String(val)
+                var result = 0.0
+                    result = Double(val)! * Double(defaultText.text!)!
+                self.resultLabel.text = String(result)
                 
             }
             if(toText.text == "EURO"){
@@ -111,7 +115,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 
-                result = Double(val)! * Double(euro)
+                result = Double(val)! * Double(defaultText.text!)!//Double(euro)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "USD"){
@@ -119,7 +123,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                 //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 
-                result = Double(val)! * Double(usd)
+                result = Double(val)! * Double(defaultText.text!)!//Double(usd)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
         }
@@ -138,7 +142,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                val = amtText.text!
                                //?? "0.0") * cad
                                
-                               result = Double(val)! * Double(inr)
+                               result = Double(val)! * Double(defaultText.text!)!//Double(inr)
                                
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
@@ -147,7 +151,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                val = amtText.text!
                                //?? "0.0") * cad
                                
-                               result = Double(val)! * Double(cad)
+                               result = Double(val)! * Double(defaultText.text!)!//Double(cad)
                                
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
@@ -157,7 +161,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                val = amtText.text!
                                //?? "0.0") * cad
                             
-                               result = Double(val)! * Double(euro)
+                               result = Double(val)! * Double(defaultText.text!)!//Double(euro)
                          
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
@@ -165,8 +169,9 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                
                                 //     toImage.image = #imageLiteral(resourceName: "us")
                                val = amtText.text!
-                               
-                               self.resultLabel.text = String(val)
+                               var result = 0.0
+                                   result = Double(val)! * Double(defaultText.text!)!
+                               self.resultLabel.text = String(result)
                          
                                            }
                    }
@@ -184,7 +189,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                val = amtText.text!
                                //?? "0.0") * cad
                                
-                               result = Double(val)! * Double(inr)
+                               result = Double(val)! * Double(defaultText.text!)!//Double(inr)
                                
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
@@ -193,15 +198,16 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                val = amtText.text!
                                //?? "0.0") * cad
                                
-                               result = Double(val)! * Double(cad)
+                               result = Double(val)! * Double(defaultText.text!)!//Double(cad)
                                
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "EURO"){
                              //        toImage.image = #imageLiteral(resourceName: "euro")
                                val = amtText.text!
-                               
-                               self.resultLabel.text = String(val)
+                               var result = 0.0
+                                   result = Double(val)! * Double(defaultText.text!)!
+                               self.resultLabel.text = String(result)
                            }
                            if(toText.text == "USD"){
                            //          toImage.image = #imageLiteral(resourceName: "us")
@@ -209,7 +215,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
                                val = amtText.text!
                                //?? "0.0") * cad
                               
-                               result = Double(val)! * Double(usd)
+                               result = Double(val)! * Double(defaultText.text!)!// Double(usd)
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            
@@ -220,6 +226,19 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
         
         
     }
+    
+    
+    func changeRateViewController(_ controller: ChangeRateViewController, didFinishAdding changedRate: String) {
+        //   <#code#>
+        
+        print("ssssss== \(changedRate)")
+        
+        defaultText.text = changedRate
+        
+        resultLabel.text = "see result here"
+        navigationController?.popViewController(animated:true)
+       }
+    
     func addItemViewController(_ controller: CurrencyListTableViewController, didFinishAdding item: CurrencyItem) {
         // let newRowIndex = items.count
         //           items.append(item)
@@ -269,30 +288,25 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate{
             controller.delegate = self
         }
         
+        
+        if segue.identifier == "changeDefault" {
+               
+            
+                 let controller1 = segue.destination
+                     as! ChangeRateViewController
+                 controller1.delegateDF = self
+            
+          
+//                 if let defvalue = defaultText.text! {
+            controller1.itemToEdit = defaultText.text!
+               
+        }
+//             }
     }
     
     
     
-    //    @IBAction func buttonClick(_ sender: Any) {
-    //
-    ////        if segue.identifier == "CheckCurrency" {
-    ////
-    ////                 let controller = segue.destination
-    ////                     as! AddNewItemController
-    ////                 controller.delegate = self
-    ////             }
-    //        // navigationController?.popViewController(animated:true)
-    //    }
-    
-    //      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //          if segue.identifier == "AddItem" {
-    //
-    //              let controller = segue.destination
-    //                  as! AddNewItemController
-    //              controller.delegate = self
-    //          }}
-    //
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
