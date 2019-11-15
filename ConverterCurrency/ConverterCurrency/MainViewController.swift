@@ -10,16 +10,16 @@ import UIKit
 
 
 
-class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultChangeControllerDelegate{
+class MainViewController: UIViewController,CurrencyItemControllerDelegate,DefaultChangeControllerDelegate{
    
     
-    func addItemViewControllerDidCancel(_ controller: CurrencyListTableViewController) {
-        navigationController?.popViewController(animated:true)
-    }
+    
+    
     var usd = 0.0
     var cad = 0.0
     var inr = 0.0
     var euro = 0.0
+    
     var isFrom = true
     @IBOutlet weak var toText: UITextField!
     @IBOutlet weak var fromText: UITextField!
@@ -30,6 +30,7 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
     @IBOutlet weak var defaultText: UITextField!
     @IBOutlet weak var toImage: UIImageView!
     @IBOutlet weak var resultLabel: UILabel!
+    
     @IBAction func converCurrency(_ sender: Any) {
         
         if(amtText.text == ""){
@@ -48,34 +49,24 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
             
             var val = ""
             if(toText.text == "INR"){
-                
-                 //     toImage.image = #imageLiteral(resourceName: "india")
                 val = amtText.text!
                 var result = 0.0
                 result = Double(val)! * Double(defaultText.text!)!
                 self.resultLabel.text = String(result)
             }
             if(toText.text == "CAD"){
-                     // toImage.image = #imageLiteral(resourceName: "canada")
-                //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
-                //?? "0.0") * cad
                 var result = 0.0
                 result = Double(val)! * Double(defaultText.text!)!//Double(cad)
                 self.resultLabel.text =  String(format:"%.2f", result)
             }
             if(toText.text == "EURO"){
-             //   toImage.image = #imageLiteral(resourceName: "euro")
-                //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
-                //?? "0.0") * cad
                 var result = 0.0
                 result = Double(val)! * Double(defaultText.text!)!// Double(euro)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "USD"){
-                //      toImage.image = #imageLiteral(resourceName: "euro")
-                //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
                 //?? "0.0") * cad
                 var result = 0.0
@@ -86,7 +77,6 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
         
         
         if(fromText.text == "CAD"){
-               //   fromImage.image = #imageLiteral(resourceName: "canada")
             var val = ""
             usd = 0.76
             cad = 1.0
@@ -94,16 +84,11 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
             euro = 0.68
             var result = 0.0
             if(toText.text == "INR"){
-                 //     toImage.image = #imageLiteral(resourceName: "india")
-                
                 val = amtText.text!
-                
                 result = Double(val)! * Double(defaultText.text!)!//Double(inr)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "CAD"){
-               //       toImage.image = #imageLiteral(resourceName: "canada")
-                
                 val = amtText.text!
                 var result = 0.0
                     result = Double(val)! * Double(defaultText.text!)!
@@ -111,25 +96,18 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
                 
             }
             if(toText.text == "EURO"){
-                    //  toImage.image = #imageLiteral(resourceName: "euro")
-                //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
-                
                 result = Double(val)! * Double(defaultText.text!)!//Double(euro)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
             if(toText.text == "USD"){
-                  //    toImage.image = #imageLiteral(resourceName: "us")
-                //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                 val = amtText.text!
-                
                 result = Double(val)! * Double(defaultText.text!)!//Double(usd)
                 self.resultLabel.text = String(format:"%.2f", result)
             }
         }
         
         if(fromText.text == "USD"){
-                 // fromImage.image = #imageLiteral(resourceName: "us")
                            var val = ""
                            usd = 1.0
                            cad = 1.32
@@ -138,36 +116,23 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
                               var result = 0.0
                            
             if(toText.text == "INR"){
-                        //             toImage.image = #imageLiteral(resourceName: "india")
                                val = amtText.text!
-                               //?? "0.0") * cad
-                               
                                result = Double(val)! * Double(defaultText.text!)!//Double(inr)
                                
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "CAD"){
-                         //            toImage.image = #imageLiteral(resourceName: "canada")
                                val = amtText.text!
-                               //?? "0.0") * cad
-                               
                                result = Double(val)! * Double(defaultText.text!)!//Double(cad)
                                
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "EURO"){
-                               //      toImage.image = #imageLiteral(resourceName: "euro")
-                               //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                                val = amtText.text!
-                               //?? "0.0") * cad
-                            
                                result = Double(val)! * Double(defaultText.text!)!//Double(euro)
-                         
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "USD"){
-                               
-                                //     toImage.image = #imageLiteral(resourceName: "us")
                                val = amtText.text!
                                var result = 0.0
                                    result = Double(val)! * Double(defaultText.text!)!
@@ -177,7 +142,6 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
                    }
         
         if(fromText.text == "EURO"){
-                //  fromImage.image = #imageLiteral(resourceName: "euro")
                            var val = ""
                            usd = 1.11
                            cad = 1.46
@@ -185,36 +149,23 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
                            euro = 1.0
                             var result = 0.0
                            if(toText.text == "INR"){
-                         //            toImage.image = #imageLiteral(resourceName: "india")
                                val = amtText.text!
-                               //?? "0.0") * cad
-                               
                                result = Double(val)! * Double(defaultText.text!)!//Double(inr)
-                               
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "CAD"){
-                            //         toImage.image = #imageLiteral(resourceName: "canada")
                                val = amtText.text!
-                               //?? "0.0") * cad
-                               
                                result = Double(val)! * Double(defaultText.text!)!//Double(cad)
-                               
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
                            if(toText.text == "EURO"){
-                             //        toImage.image = #imageLiteral(resourceName: "euro")
                                val = amtText.text!
                                var result = 0.0
                                    result = Double(val)! * Double(defaultText.text!)!
                                self.resultLabel.text = String(result)
                            }
                            if(toText.text == "USD"){
-                           //          toImage.image = #imageLiteral(resourceName: "us")
-                               //scoreLabel.text = NSString(format: "Score: %i", Score) as String
                                val = amtText.text!
-                               //?? "0.0") * cad
-                              
                                result = Double(val)! * Double(defaultText.text!)!// Double(usd)
                                self.resultLabel.text = String(format:"%.2f", result)
                            }
@@ -229,31 +180,23 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
     
     
     func changeRateViewController(_ controller: ChangeRateViewController, didFinishAdding changedRate: String) {
-        //   <#code#>
-        
-        print("ssssss== \(changedRate)")
+        print("rate changed== \(changedRate)")
         
         defaultText.text = changedRate
-        
         resultLabel.text = "see result here"
         navigationController?.popViewController(animated:true)
        }
     
+    
     func addItemViewController(_ controller: CurrencyListTableViewController, didFinishAdding item: CurrencyItem) {
-        // let newRowIndex = items.count
-        //           items.append(item)
-        //           let indexPath = IndexPath(row: newRowIndex, section: 0)
-        //           let indexPaths = [indexPath]
-        //           tableView.insertRows(at: indexPaths, with: .automatic)
         
         print("\(item.text)")
+        
         if(isFrom){
             fromText.text = item.text
               fromImage.image = item.img
             
         }else{
-            
-            
             toImage.image = item.img
             toText.text = item.text
         }
@@ -266,13 +209,6 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
         dismiss(animated: true, completion: nil)
     }
     
-    //    func addItemViewControllerDidCancel(_ controller: CurrencyListTableViewController) {
-    //         navigationController?.popViewController(animated:true)
-    //    }
-    //
-    //    func addItemViewController(_ controller: CurrencyListTableViewController, didFinishAdding item: CurrencyItem) {
-    //
-    //    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "selectCurrency" {
             isFrom = true
@@ -295,13 +231,8 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
                  let controller1 = segue.destination
                      as! ChangeRateViewController
                  controller1.delegateDF = self
-            
-          
-//                 if let defvalue = defaultText.text! {
             controller1.itemToEdit = defaultText.text!
-               
         }
-//             }
     }
     
     
@@ -310,7 +241,6 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     
@@ -320,7 +250,6 @@ class ViewController: UIViewController,CurrencyItemControllerDelegate,DefaultCha
     
     func setDfaultValue(){
         if(fromText.text == "INR") {
-             //  fromImage.image = #imageLiteral(resourceName: "india")
                usd = 0.014
                cad = 0.019
                inr = 1

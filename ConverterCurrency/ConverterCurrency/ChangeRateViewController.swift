@@ -21,6 +21,8 @@ class ChangeRateViewController: UIViewController {
     
     var delegateDF: DefaultChangeControllerDelegate?
     
+    
+    
     @IBAction func ChangedPress(_ sender: Any) {
         if(rateText.text == ""){
             
@@ -39,11 +41,10 @@ class ChangeRateViewController: UIViewController {
     
     override func viewDidLoad() {
       super.viewDidLoad()
-    //  navigationItem.largeTitleDisplayMode = .never
       if let itemToEdit = itemToEdit {
         title = "Edit Item"
         rateText.text = itemToEdit
-      //  doneBarButton.isEnabled = true
+      
       }
     }
     

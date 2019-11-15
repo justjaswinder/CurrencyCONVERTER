@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8tC-Y0-ELL">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,33 +9,33 @@
         <!--My Currency Converter-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ConverterCurrency" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ConverterCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="KjY-hj-CaK">
-                                <rect key="frame" x="20" y="64" width="280" height="484"/>
+                                <rect key="frame" x="20" y="64" width="560" height="516"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="From Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGP-gE-zwb">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="28.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q8c-y7-kqZ">
-                                        <rect key="frame" x="0.0" y="46" width="280" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="48.5" width="560" height="29"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CAK-rl-iay">
-                                                <rect key="frame" x="80" y="-5.5" width="190" height="36"/>
+                                                <rect key="frame" x="80" y="-3.5" width="470" height="36"/>
                                                 <subviews>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q98-hP-GMh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="138" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n59-5W-Dmc">
-                                                        <rect key="frame" x="143" y="0.0" width="47" height="36"/>
+                                                        <rect key="frame" x="347" y="0.0" width="123" height="36"/>
                                                         <color key="backgroundColor" red="0.78796955960000004" green="0.56883953109999996" blue="0.051680097330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Select">
@@ -49,7 +48,7 @@
                                                 </subviews>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curr" translatesAutoresizingMaskIntoConstraints="NO" id="nm6-F1-Aed">
-                                                <rect key="frame" x="10" y="-17.5" width="60" height="60"/>
+                                                <rect key="frame" x="10" y="-15.5" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="60" id="nbg-w3-ex2"/>
                                                     <constraint firstAttribute="width" secondItem="nm6-F1-Aed" secondAttribute="height" multiplier="1:1" id="pxo-ih-t3A"/>
@@ -66,24 +65,24 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQv-R2-HSe">
-                                        <rect key="frame" x="0.0" y="91.5" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="97.5" width="560" height="28.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qkm-7p-ee7">
-                                        <rect key="frame" x="0.0" y="137.5" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="146" width="560" height="29"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="AOe-aC-Ejc">
-                                                <rect key="frame" x="80" y="-5" width="190" height="36"/>
+                                                <rect key="frame" x="80" y="-3.5" width="470" height="36"/>
                                                 <subviews>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Select Currency" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vK6-KT-8iC">
-                                                        <rect key="frame" x="0.0" y="0.0" width="138" height="36"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="342" height="36"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGH-Vb-BD4">
-                                                        <rect key="frame" x="143" y="0.0" width="47" height="36"/>
+                                                        <rect key="frame" x="347" y="0.0" width="123" height="36"/>
                                                         <color key="backgroundColor" red="0.78796955958186532" green="0.5688395311192801" blue="0.051680097327373241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                         <state key="normal" title="Select">
@@ -97,7 +96,7 @@
                                                 <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </stackView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="curr" translatesAutoresizingMaskIntoConstraints="NO" id="FM6-ly-iUW">
-                                                <rect key="frame" x="10" y="-17" width="60" height="60"/>
+                                                <rect key="frame" x="10" y="-15.5" width="60" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="FM6-ly-iUW" secondAttribute="height" multiplier="1:1" id="2vH-wv-4fo"/>
                                                     <constraint firstAttribute="width" constant="60" id="xQM-ic-nkN"/>
@@ -114,13 +113,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swt-Qb-ih2">
-                                        <rect key="frame" x="0.0" y="183.5" width="280" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="195" width="560" height="28.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6y-3N-bP3">
-                                        <rect key="frame" x="0.0" y="229" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="243.5" width="560" height="29"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
@@ -128,16 +127,16 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Default Amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QF9-bT-HQ2">
-                                        <rect key="frame" x="0.0" y="275" width="280" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="292.5" width="560" height="28.5"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="da2-bU-Ddd">
-                                        <rect key="frame" x="0.0" y="320.5" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="341" width="560" height="29"/>
                                         <subviews>
                                             <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FQi-th-gTY">
-                                                <rect key="frame" x="0.0" y="0.0" width="130" height="26"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="29"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="done"/>
                                                 <connections>
@@ -145,7 +144,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ah-So-q6i">
-                                                <rect key="frame" x="150" y="0.0" width="130" height="26"/>
+                                                <rect key="frame" x="290" y="0.0" width="270" height="29"/>
                                                 <color key="backgroundColor" red="0.78796955960000004" green="0.56883953109999996" blue="0.051680097330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <state key="normal" title="Change">
@@ -158,7 +157,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NYS-Q5-MnF">
-                                        <rect key="frame" x="0.0" y="366.5" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="390" width="560" height="28.5"/>
                                         <color key="backgroundColor" red="0.086178635640000001" green="0.25528403649999998" blue="0.84787888600000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                         <state key="normal" title="Convert">
@@ -169,13 +168,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="see result here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOR-uF-Wob">
-                                        <rect key="frame" x="0.0" y="412.5" width="280" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="438.5" width="560" height="29"/>
                                         <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DY2-gO-OeC">
-                                        <rect key="frame" x="0.0" y="458" width="280" height="26"/>
+                                        <rect key="frame" x="0.0" y="487.5" width="560" height="28.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                 </subviews>
@@ -212,19 +211,19 @@
             <objects>
                 <tableViewController id="bd1-Th-4D7" customClass="CurrencyListTableViewController" customModule="ConverterCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6e2-MX-mne">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.56704859249999995" green="0.48579232750000001" blue="0.70144511009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" tag="1000" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="currencyItem" rowHeight="120" id="bB4-O8-HV6">
-                                <rect key="frame" x="0.0" y="28" width="320" height="120"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bB4-O8-HV6" id="Nyg-7E-vvU">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W6z-ff-hbI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="120"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-TC-1gd">
                                                     <rect key="frame" x="10" y="30" width="60" height="60"/>
@@ -234,7 +233,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15s-k1-R3c">
-                                                    <rect key="frame" x="80" y="49.5" width="230" height="21"/>
+                                                    <rect key="frame" x="80" y="49.5" width="510" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -276,16 +275,16 @@
             <objects>
                 <viewController id="IeV-u2-Alf" customClass="ChangeRateViewController" customModule="ConverterCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pJi-SX-fcd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-Ff-FZh">
-                                <rect key="frame" x="30" y="64" width="260" height="34"/>
+                                <rect key="frame" x="30" y="64" width="540" height="34"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vz9-8n-eQJ">
-                                <rect key="frame" x="25" y="118" width="270" height="30"/>
+                                <rect key="frame" x="25" y="118" width="550" height="30"/>
                                 <color key="backgroundColor" red="0.66656470300000004" green="0.51719868179999995" blue="0.0186529886" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Change Default Rate">
                                     <color key="titleColor" red="0.059749990699999998" green="0.22451809049999999" blue="0.86137026549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
